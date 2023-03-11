@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="techlogin.css" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technician Login Page</title>
+  </head>
+
+  <body>
+    <center><h1>Technician Login</h1></center>
+    <form action="tHome.html">
+      <div class="cont1">
+        <button type="button" class="cancelBtn">Cancel</button>
+        <br /><br />
+        <label>Technician Id : </label>
+        <input
+          type="text"
+          placeholder="ex. p9240r8kjsad09898"
+          name="username"
+          required
+        />
+        <br />
+        <br />
+        <label>Password : </label>
+        <input
+          type="password"
+          placeholder="********"
+          name="password"
+          required
+        />
+        <br /><br />
+        <button type="submit" class="subBtn">Login</button>
+        <br />
+        <input type="checkbox" checked="checked" /> Remember me
+        <p>Forgot <a href="forgot.html">Password?</a></p>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="tHome.css" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student's Home Page</title>
+  </head>
+  <body>
+    <div class="directoryL">
+      <center><h1>Student's Home Page</h1></center>
+      <center>
+        <p>Welcome! You are currently logged in as [Student ID]</p>
+      </center>
+
+      <!--Directory of Buttons-->
+      <button
+        class="checkBookBTN"
+        onclick="window.location.href='addBook.html'"
+      >
+        Check out a Book
+      </button>
+
+      <button class="rtnBookBTN" onclick="window.location.href='addBook.html'">
+        Return a Book
+      </button>
+
+      <button
+        class="serBookBTN"
+        onclick="window.location.href='studentSearch.html'"
+      >
+        Search for Books
+      </button>
+
+      <!--Log out button-->
+      <br /><br />
+      <button class="logout" onclick="window.location.href='studLogin.html'">
+        Log Out
+      </button>
+    </div>
+  </body>
+</html>

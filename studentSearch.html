@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="studentSearch.css" />
+<html lang="en">
+  <head>
+    <title>Student Search Page</title>
+  </head>
+  <body>
+    <center><h1>Student Search Page</h1></center>
+    <div class="addBook1">
+      <button
+      class="cancelBtn"
+      onclick="window.location.href='sHome.html'"
+    >
+      Cancel
+    </button>
+      <form class="addBook2"action="#">
+        <hr />
+        <center>
+          <p>Please input all known information for a more accurate search</p>
+        </center>
+        <hr />
+        <br /><br />
+        <!--Start of Form-->
+        <label for="tilBookS">Title : </label>
+        <input type="text" placeholder="Title" name="tilBookS" id="tilBookS" />
+
+        <label for="autBookS">Author : </label>
+        <input
+          type="text"
+          placeholder="First Name, Last Name"
+          name="autBookS"
+          id="autBookS"
+        />
+
+        <label for="numBookS">Book Number : </label>
+        <input type="text" placeholder="###" name="numBookS" id="numBookS" />
+        <br />
+        <br />
+        <label>Book Type : </label>
+        <input type="checkbox" name="typBookS" id="typBookS" />Ficton
+        <input type="checkbox" name="typBookS" id="typBookS" />Non-Fiction
+        <input type="checkbox" name="typBookS" id="typBookS" />Graphic Novel
+        <br />
+        <br />
+        <label for="pubBookS">Publication Date : </label>
+        <select name="pubBookS" id="pubBookS">
+          <option value="op1BookS">Before 2000</option>
+          <option value="op2BookS">2001-2005</option>
+          <option value="op3BookS">2006-2010</option>
+          <option value="op2BookS">2011-2015</option>
+          <option value="op2BookS">2016-2020</option>
+          <option value="op2BookS">2021-2023</option>
+        </select>
+
+        <!--Submit Form-->
+        <br /><br />
+        <button type="submit" class="subBookS">Search!</button>
+      </div>
+    </form>
+  </body>
+</html>
