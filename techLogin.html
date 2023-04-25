@@ -4,11 +4,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Technician Login Page</title>
+    <script src="techLogin.js"></script>
   </head>
 
   <body>
     <center><h1>Technician Login</h1></center>
-    <form action="tHome.html">
+    <form>
       <div class="cont1">
         <button
           class="cancelBtn"
@@ -36,9 +37,11 @@
           required
         />
         <br /><br />
-        <button type="submit" class="subBtn">Login</button>
+        <button type="submit" class="subBtn" onclick="loginFunc(this.form);">
+          Login
+        </button>
         <br />
-        <input type="checkbox" checked="checked" /> Remember me
+
         <p>Forgot <a href="forgot.html">Password?</a></p>
       </div>
     </form>
