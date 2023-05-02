@@ -8,12 +8,9 @@
   <body>
     <center><h1>Student Search Page</h1></center>
     <div class="addBook1">
-      <button
-      class="cancelBtn"
-      onclick="window.location.href='sHome.html'"
-    >
-      Cancel
-    </button>
+      <button class="cancelBtn" onclick="window.location.href='sHome.html'">
+        Cancel
+      </button>
       <form class="addBook2">
         <hr />
         <center>
@@ -38,9 +35,24 @@
         <br />
         <br />
         <label>Book Type : </label>
-        <input type="checkbox" name="typBookS0" id="Ficton" value="Ficton"/>Ficton
-        <input type="checkbox" name="typBookS1" id="Non-Fiction" value="Non-Fiction"/>Non-Fiction
-        <input type="checkbox" name="typBookS2" id="Graphic Novel" value="Graphic Novel"/>Graphic Novel
+        <input
+          type="checkbox"
+          name="typBookS0"
+          id="Ficton"
+          value="Ficton"
+        />Ficton
+        <input
+          type="checkbox"
+          name="typBookS1"
+          id="Non-Fiction"
+          value="Non-Fiction"
+        />Non-Fiction
+        <input
+          type="checkbox"
+          name="typBookS2"
+          id="Graphic Novel"
+          value="Graphic Novel"
+        />Graphic Novel
         <br />
         <br />
         <label for="pubBookS">Publication Date : </label>
@@ -55,8 +67,14 @@
 
         <!--Submit Form-->
         <br /><br />
-        <button type="submit" class="subBookS" onclick="getStudentSearchData(this.form);">Search!</button>
-      </div>
-    </form>
+        <button
+          type="submit"
+          class="subBookS"
+          onclick="getStudentSearchData(this.form);"
+        >
+          <a href="studentSearchResults.html">Search!</a>
+        </button>
+      </form>
+    </div>
   </body>
 </html>

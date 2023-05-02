@@ -31,5 +31,6 @@ if(!studBookNum || !studTitle || !studAuthor || !studPubDate){
     searchTerms = [localStorage.getItem("studBookNumKey"), localStorage.getItem("studTitleKey0"),
         localStorage.getItem("studTitleKey1"), localStorage.getItem("studTitleKey2"),
         localStorage.getItem("studAuthorKey"), localStorage.getItem("studPubDateKey")];
+        window.location.href=studentSearchResults.html
 }   
 }

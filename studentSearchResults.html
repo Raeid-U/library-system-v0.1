@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="studentSearchResults.css" />
+  <script src="studentSearchResults.js"></script>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Results</title>
   </head>
-  <body>
+  <!-- onload to load in the existing local storage items -->
+  <body onload="displayResults();">
     <center><h1>Search Results</h1></center>
     <div class="sSR">
-      <center>[X] amount of Search Results</center>
-      <button
-        class="cancelBtn"
-        onclick="window.location.href='studentSearch.html'"
-      >
-        Return
-      </button>
+      <center>
+        [X] amount of Search Results
+        <br />
+        <br /><textarea
+          name="display"
+          id="display"
+          rows="15"
+          cols="33"
+        ></textarea>
+        <br /><button
+          class="cancelBtn"
+          onclick="window.location.href='studentSearch.html'"
+        >
+          Return
+        </button>
+      </center>
     </div>
   </body>
 </html>
