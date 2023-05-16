@@ -5,6 +5,7 @@ var libTechType;
 var libTechPubDate;
 
 var bookValues;
+
 function addNewBook(addBookForm){
     libTechBookNum = addBookForm.numBookL.value;
     libTechTitle = addBookForm.tilBookL.value;

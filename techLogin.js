@@ -1,10 +1,12 @@
 var libTechLogUser;
 var libTechLogPass;
+
 var usernames = ["Parth", "Joel", "Raeid"];
 var passwords = ["123","456","Bald"];
 
 var values;
 var wrongcount = 0;
+
 function loginFunc(logForm){
     libTechLogUser = logForm.username.value;
     libTechLogPass = logForm.password.value;
@@ -16,15 +18,14 @@ function loginFunc(logForm){
         localStorage.setItem("libTechPass", libTechLogPass);
     for(let i = 0; i < usernames.length; i++){
         if(localStorage.getItem("libTechUser") === usernames[i] && localStorage.getItem("libTechPass") === passwords[i]){
-            alert("You will be redirected");
-            window.location.href='tHome.html';
-            break;
+//alert("You will be redirected");
+            replace('tHome.html');
          } else {
             wrongcount++
-        }
+         }
      }
-     if(wrongcount === usernames.length){
-        alert("Incorrect Username or Password");
+     if(wrongcount === 3){
+        alert("Incorrect Username/Password")
      }
    }     
 }
