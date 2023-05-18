@@ -6,8 +6,6 @@ var studType1;
 var studType2;
 var studPubDate;
 
-var searchTerms;
-
 function getStudentSearchData(searchForm){
     studBookNum = searchForm.numBookS.value;
     studTitle = searchForm.tilBookS.value;
@@ -18,7 +16,7 @@ function getStudentSearchData(searchForm){
     studPubDate = searchForm.pubBookS.value;
 
 
-    localStorage.setItem("studBookNumKey", studBookNum);
+    localStorage.setItem("studBookNumKey", JSON.stringify(studBookNum));
     localStorage.setItem("studTitleKey", studTitle);
     localStorage.setItem("studAuthorKey", studAuthor);
 
@@ -37,10 +35,5 @@ if(studType2){
     localStorage.setItem("studTypeKey2", studType2);
     
     localStorage.setItem("studPubDateKey", studPubDate);
-
-    searchTerms = [localStorage.getItem("studBookNumKey"), localStorage.getItem("studTitleKey0"),
-        localStorage.getItem("studTitleKey1"), localStorage.getItem("studTitleKey2"),
-        localStorage.getItem("studAuthorKey"), localStorage.getItem("studPubDateKey")];
-
 
 }
