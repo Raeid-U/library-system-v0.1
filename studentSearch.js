@@ -17,8 +17,8 @@ function getStudentSearchData(searchForm){
 
 
     localStorage.setItem("studBookNumKey", JSON.stringify(studBookNum));
-    localStorage.setItem("studTitleKey", studTitle);
-    localStorage.setItem("studAuthorKey", studAuthor);
+    localStorage.setItem("studTitleKey", JSON.stringify(studTitle));
+    localStorage.setItem("studAuthorKey", JSON.stringify(studAuthor));
 
 if(studType0){
     studType0 = "Fiction"
@@ -30,10 +30,10 @@ if(studType2){
     studType2 = "Graphic Novel"
 }
 
-    localStorage.setItem("studTypeKey0", studType0);
-    localStorage.setItem("studTypeKey1", studType1);
-    localStorage.setItem("studTypeKey2", studType2);
+    localStorage.setItem("studTypeKey0", JSON.stringify(studType0));
+    localStorage.setItem("studTypeKey1", JSON.stringify(studType1));
+    localStorage.setItem("studTypeKey2", JSON.stringify(studType2));
     
-    localStorage.setItem("studPubDateKey", studPubDate);
+    localStorage.setItem("studPubDateKey", JSON.stringify(studPubDate));
 
 }
