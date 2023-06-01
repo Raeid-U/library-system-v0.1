@@ -4,6 +4,7 @@ var bookTitleLib = [ ]
 var bookAuthorLib = [ ]
 var bookTypeLib = [ ]
 var bookPubDateLib = [ ]
+var bookAvailLib = [ ]
 
 //These are the variables for the information that the student entered for the search
 var bookNumStud;
@@ -21,6 +22,7 @@ function displayResults(){
     bookAuthorLib = JSON.parse(localStorage.getItem("libTechAuthorKey"));
     bookTypeLib = JSON.parse(localStorage.getItem("libTechTypeKey"));
     bookPubDateLib = JSON.parse(localStorage.getItem("libTechPubDateKey"));
+    bookAvailLib = JSON.parse(localStorage.getItem("libTechAvailKey"))
 
 //Student Search Terms
     bookNumStud = JSON.parse(localStorage.getItem("studBookNumKey"));
@@ -32,51 +34,26 @@ function displayResults(){
     bookPubDateStud = JSON.parse(localStorage.getItem("studPubDateKey"));
 
 //New If statement for search terms
-let results = [ ]
+let results = ''
 
 for (i = 0; i < bookNumLib.length; i++){
     if (bookNumLib[i] === bookNumStud || 
-        bookTitleLib[i] === bookTitleStud || 
-        bookAuthorLib[i] === bookAuthorStud || 
+        bookTitleLib[i] === bookTitleStud || bookTitleLib[i].toLowerCase() === bookTitleStud||
+        bookAuthorLib[i] === bookAuthorStud || bookAuthorLib[i].toLowerCase() === bookAuthorStud||
         bookPubDateLib[i] === bookPubDateStud || 
         bookTypeLib[i] === bookTypeStud0 || 
         bookTypeLib[i] === bookTypeStud1 || 
         bookTypeLib[i] === bookTypeStud2){
-            results.push(bookNumLib[i])
+        results += `Book Number: ${bookNumLib[i]} \nTitle: ${bookTitleLib[i]} \nAuthor: ${bookAuthorLib[i]} \nBook Type: ${bookTypeLib[i]} \nPublication Date: ${bookPubDateLib[i]} \nAvailable?: ${bookAvailLib[i]}\n \n`
     }  
 }
 
-localStorage.setItem("resultsKey", JSON.stringify(results))
+if (results !== ' '){
+    document.getElementById("display1").innerHTML = results;
+} else (
+    document.getElementById("display1").innerHTML = 'No Search Results were Found'
+)
 
-var resultChecker = JSON.parse(localStorage.getItem("resultsKey"))
-//display the Search Results
-var table = ' ';
-    for (x = 0; x < bookNumLib.length; x++) {
-        //this if the IF statement for the search results to be displayed depending on the search inputs put in by the student
-        if (resultChecker[x] === bookNumLib[x]) {
-            //making all of the rows of the table with the values of the [x] index in the arrays if a match is found
-            //opening table row
-            table += "<tr>";
-            //result number
-            table += "<td style='border: 1px solid black;height: 120px;'>" + (x + 1) + "</td>";
-            //book title
-            table += "<td style='border: 1px solid black;height: 120px;'>" + bookTitleLib[x] + "</td>";
-            //book number
-            table += "<td style='border: 1px solid black;height: 120px;'>" + bookNumLib[x] + "</td>";
-            //book author
-            table += "<td style='border: 1px solid black;height: 120px;'>" + bookAuthorLib[x] + "</td>";
-            //book type
-            table += "<td style='border: 1px solid black;height: 120px;'>" + bookTypeLib[x] + "</td>";
-            //book genre
-            table += "<td style='border: 1px solid black;height: 120px;'>" + bookGenreLib[x] + "</td>";
-            //book publication date
-            table += "<td style='border: 1px solid black;height: 120px;'>" + bookPubDateLib[x] + "</td>";
-            //closing the table row
-            table += "</tr>";
-        }
-    }
-table += "</table>";
-document.getElementById("display1").innerHTML += table;
 
     // document.getElementById("display1").innerHTML = (`Book Number: ${bookNumLib[i]} \nTitle: ${bookTitleLib[i]} \nAuthor: ${bookAuthorLib[i]} \nBook Type: ${bookTypeLib[i]} \nPublication Date: ${bookPubDateLib[i]}`);
 
