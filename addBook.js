@@ -17,6 +17,7 @@ function refreshFunction(){
 }
 
 function addNewBook(addBookForm){
+refreshFunction();
 libTechBookNum.push(addBookForm.numBookL.value);
 libTechTitle.push(addBookForm.tilBookL.value);
 libTechAuthor.push(addBookForm.autBookL.value);
@@ -30,4 +31,5 @@ libTechAvail.push("Yes")
         localStorage.setItem("libTechTypeKey", JSON.stringify(libTechType));
         localStorage.setItem("libTechPubDateKey", JSON.stringify(libTechPubDate));
         localStorage.setItem("libTechAvailKey", JSON.stringify(libTechAvail));
+alert(`The Book " ${addBookForm.tilBookL.value} " has been added` )
 }
