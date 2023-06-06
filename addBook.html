@@ -6,7 +6,7 @@
     <title>Add a Book Page</title>
     <script src="addBook.js"></script>
   </head>
-  <body>
+  <body onload="refreshFunction()">
     <center><h1>Add Book Information</h1></center>
     <div class="addBook1">
       <button class="cancelBtn" onclick="window.location.href='tHome.html'">
@@ -84,7 +84,7 @@
 
         <br /><br />
         <!--Submit Form-->
-        <button type="submit" class="subBookL" onclick="addNewBook(this.form);">
+        <button type="button" class="subBookL" onclick="addNewBook(this.form);">
           Add the Book
         </button>
       </form>

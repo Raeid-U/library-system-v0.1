@@ -1,29 +1,35 @@
-var libTechBookNum;
-var libTechTitle;
-var libTechAuthor;
-var libTechType;
-var libTechPubDate;
+var libTechBookNum = [ ];
+var libTechTitle = [ ];
+var libTechAuthor = [ ];
+var libTechType = [ ];
+var libTechPubDate = [ ];
+var libTechAvail = [ ];
 
-var bookValues;
+function refreshFunction(){
+    if (JSON.parse(localStorage.getItem("libTechBookNumKey")) != null){
+        libTechBookNum = JSON.parse(localStorage.getItem("libTechBookNumKey"));
+        libTechTitle = JSON.parse(localStorage.getItem("libTechTitleKey"));
+        libTechAuthor = JSON.parse(localStorage.getItem("libTechAuthorKey"));
+        libTechType = JSON.parse(localStorage.getItem("libTechTypeKey"));
+        libTechPubDate = JSON.parse(localStorage.getItem("libTechPubDateKey"));
+        libTechAvail = JSON.parse(localStorage.getItem("libTechAvailKey"))
+    }
+}
 
 function addNewBook(addBookForm){
-    libTechBookNum = addBookForm.numBookL.value;
-    libTechTitle = addBookForm.tilBookL.value;
-    libTechAuthor = addBookForm.autBookL.value;
-    libTechType = addBookForm.typBookL.value;
-    libTechPubDate = addBookForm.pubBookL.value;
+refreshFunction();
+libTechBookNum.push(addBookForm.numBookL.value);
+libTechTitle.push(addBookForm.tilBookL.value);
+libTechAuthor.push(addBookForm.autBookL.value);
+libTechType.push(addBookForm.typBookL.value);
+libTechPubDate.push(addBookForm.pubBookL.value);
+libTechAvail.push("Yes")
 
-    if(!libTechBookNum || !libTechTitle || !libTechAuthor || !libTechType || !libTechPubDate){
-        alert("Please fill out all the fields");
-    }else{
-        localStorage.setItem("libTechBookNumKey", libTechBookNum);
-        localStorage.setItem("libTechTitleKey", libTechTitle);
-        localStorage.setItem("libTechAuthorKey", libTechAuthor);
-        localStorage.setItem("libTechTypeKey", libTechType);
-        localStorage.setItem("libTechPubDateKey", libTechPubDate);
-
-        bookValues = [localStorage.getItem("libTechBookNumKey"), localStorage.getItem("libTechTitleKey"), 
-            localStorage.getItem("libTechAuthorKey"), localStorage.getItem("libTechTypeKey"), 
-            localStorage.getItem("libTechPubDateKey")];
-    }
+        localStorage.setItem("libTechBookNumKey", JSON.stringify(libTechBookNum));
+        localStorage.setItem("libTechTitleKey", JSON.stringify(libTechTitle));
+        localStorage.setItem("libTechAuthorKey", JSON.stringify(libTechAuthor));
+        localStorage.setItem("libTechTypeKey", JSON.stringify(libTechType));
+        localStorage.setItem("libTechPubDateKey", JSON.stringify(libTechPubDate));
+        localStorage.setItem("libTechAvailKey", JSON.stringify(libTechAvail));
+alert(`The Book " ${addBookForm.tilBookL.value} " has been added` )
 }

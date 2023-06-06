@@ -4,15 +4,42 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delete a Book</title>
+    <script src="delBook.js"></script>
   </head>
-  <!-- Empty space to display the books that are available to delete -->
   <body>
     <center><h1>Delete a Book</h1></center>
     <div class="delBookBlock">
-      <center>[X] amount of Books in Catalogue</center>
       <button class="cancelBtn" onclick="window.location.href='tHome.html'">
         Return to Home
       </button>
+      <br> <br> <hr> 
+      <center>
+     <p>Please Enter the Book Number of the Book You would like to delete</p>   
+      <form class="rBook2">
+        <hr />
+        <br />
+        <!--Start of Form-->
+
+        <label for="numDBook">Book Number : </label>
+        <input
+          type="text"
+          placeholder="#####"
+          name="numDBook"
+          id="numDBook"
+          required
+        />
+
+        <p>
+          **Book Numbers are located on the Sticker and Stamped on the Cover
+        </p>
+
+        <!--Submit Form-->
+        <br />
+        <button type="submit" class="subDBook" onclick="deleteBook(this.form)">
+          Delete Book
+        </button>
+      </center>
+      </form>
     </div>
   </body>
 </html>
