@@ -4,6 +4,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Return a Book</title>
+    <script src="returnBook.js"></script>
   </head>
   <body>
     <center><h1>Add Book Information for Return</h1></center>
@@ -12,19 +13,10 @@
         Cancel
       </button>
       <form class="rBook2" action="#">
-        <label for="scanBTN">Scan Barcode</label>
-        <button class="scanBTN">Scan</button>
-
-        <br /><br />
+        <p>Please input the Book Number to proceed</p>
+        <hr />
+        <br />
         <!--Start of Form-->
-        <label for="idRBook">Student or Technician ID Number : </label>
-        <input
-          type="text"
-          placeholder="#####"
-          name="idRBook"
-          id="idRbook"
-          required
-        />
 
         <label for="numRBook">Book Number : </label>
         <input
@@ -35,9 +27,15 @@
           required
         />
 
+        <p>
+          **Book Numbers are located on the Sticker and Stamped on the Cover
+        </p>
+
         <!--Submit Form-->
         <br />
-        <button type="submit" class="subRBook">Return the Book</button>
+        <button type="submit" class="subRBook" onclick="returnBook(this.form)">
+          Return the Book
+        </button>
       </form>
     </div>
   </body>

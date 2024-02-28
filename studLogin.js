@@ -1,8 +1,8 @@
 // Array storing valid usernames and passwords
 var validCredentials = [
-    { username: "Parth", password: "123" },
-    { username: "Raeid", password: "456" },
-    { username: "Joel", password: "789" }
+    { username: "Mikael", password: "123" },
+    { username: "Vanish", password: "456" },
+    { username: "James Byron Luchak", password: "789" }
   ];
   
   // Function to check if the entered credentials are valid
@@ -29,8 +29,8 @@ var validCredentials = [
       var isValid = checkCredentials(enteredUsername, enteredPassword);
   
       if (isValid) {
-        localStorage.setItem("lID", enteredUsername)
-        window.location.href = "tHome.html";
+        localStorage.setItem("sID", enteredUsername)
+        window.location.href = "sHome.html";
       } else {
         alert("Invalid Login. Please try again.");
       }
