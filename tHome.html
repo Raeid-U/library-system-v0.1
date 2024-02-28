@@ -4,11 +4,15 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Technician's Home Page</title>
+    <script src="tHome.js"></script>
   </head>
-  <body>
+  <body onload="loadID()">
     <div class="directoryL">
       <center><h1>Library Technician's Home Page</h1></center>
-      <center><p>Welcome! You are currently logged in as [TECH ID]</p></center>
+      <center>
+        <p>Welcome! You are currently logged in as</p>
+        <p id="lID"></p>
+      </center>
 
       <!--Directory of Buttons-->
       <button class="addBookBTN" onclick="window.location.href='addBook.html'">

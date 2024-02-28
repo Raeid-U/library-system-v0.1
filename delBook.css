@@ -31,6 +31,12 @@ Body {
     border-radius: 10px;
     padding: 10px 18px;
     }  
+
+    .subDBook {
+    width: auto; 
+    border-radius: 10px;
+    padding: 10px 18px;
+    }
     
 
     .delBookBlock { 

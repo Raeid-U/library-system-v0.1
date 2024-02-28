@@ -4,6 +4,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout a Book</title>
+    <script src="checkBook.js"></script>
   </head>
   <body>
     <center><h1>Add Book Information for Checkout</h1></center>
@@ -12,19 +13,10 @@
         Cancel
       </button>
       <form class="cBook2" action="#">
-        <label for="scanBTN">Scan Barcode</label>
-        <button class="scanBTN">Scan</button>
-
-        <br /><br />
+        <p>Please input the Book Number to proceed</p>
+        <hr />
+        <br />
         <!--Start of Form-->
-        <label for="idCBook">Student or Technician ID Number : </label>
-        <input
-          type="text"
-          placeholder="#####"
-          name="idCBook"
-          id="idCbook"
-          required
-        />
 
         <label for="numCBook">Book Number : </label>
         <input
@@ -42,7 +34,13 @@
 
         <!--Submit Form-->
         <br />
-        <button type="submit" class="subCBook">Checkout the Book</button>
+        <button
+          type="submit"
+          class="subCBook"
+          onclick="checkoutBook(this.form);"
+        >
+          Checkout the Book
+        </button>
       </form>
     </div>
   </body>

@@ -5,6 +5,10 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Results</title>
+    <p>
+      These results are not updated in real-time. For current Info, please
+      refresh frequently
+    </p>
   </head>
   <!-- onload to load in the existing local storage items -->
   <body onload="displayResults();">
@@ -14,10 +18,8 @@
         Search Results
         <br />
         <br />
-        <p>Atleast 1 or more Search Terms Match:</p>
-        <textarea name="display" id="display1" rows="5" cols="33"></textarea>
-        <br />
-        <textarea name="display" id="display2" rows="1" cols="33"></textarea>
+        <p>Search Results:</p>
+        <textarea name="display1" id="display1" cols="30" rows="50"></textarea>
         <br /><button
           class="cancelBtn"
           onclick="window.location.href='studentSearch.html'"
